@@ -1,5 +1,5 @@
 let personas = [];
-let persona = {};
+
 var contadorP=0;
 var contadorE=0;
 
@@ -9,6 +9,7 @@ for (let index = 0; index < 50; index++) {
             url: "https://randomuser.me/api",
             success: (datos) => {
                 let person = datos.results[0];
+                let persona={};
                 persona.nombre = person.name.first;
                 persona.apellido = person.name.last;
                 persona.genero = person.gender;
@@ -35,5 +36,5 @@ for (let index = 0; index < 50; index++) {
 
 
 function mostrarPersonas() {
-    console.log("pintar personas");
+    console.log(personas);
 }
