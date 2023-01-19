@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
     <div class="container">
         <div class="row">
             <div class="col-6">
@@ -24,14 +25,17 @@
             <div class="col-3">
                 <h3>Contador:</h3>
                 <div id="number"></div>
+                <button id="btnRepetir" class="btn btn-success">Repetir</button>
+                <button id="btnRecargar" class="btn btn-success">Nuevos personajes</button>
             </div>
         </div>
 
         <div id="contenedorPersonas" class="row">
-            <article class="col-md-1 col-sm-6 persona">
-                <p>Juan</p>
-                <img src="https://randomuser.me/api/portraits/men/64.jpg" alt="">
-            </article>
+            <div class="d-flex justify-content-center loading">
+                <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
         </div>
     </div>
 
