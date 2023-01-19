@@ -37,14 +37,13 @@ for (let index = 0; index < 80; index++) {
 
 function mostrarPersonas() {
     let aleatorio = Math.floor(Math.random() * personas.length);
-    let htmlPersonaBuscar = `<article class="col-md-1 persona">
+    let htmlPersonaBuscar = `<article class="col-3 persona">
     <p>${personas[aleatorio].nombre}</p>
     <img src="${personas[aleatorio].imagen}" alt="">
 </article>`;
-$("#personar_buscar").html(htmlPersonaBuscar);
+    iniciarcontador();
 
-
-
+    $("#personar_buscar").html(htmlPersonaBuscar);
     let contenido = "";
     for (let index = 0; index < personas.length; index++) {
         const persona = personas[index];
@@ -55,4 +54,13 @@ $("#personar_buscar").html(htmlPersonaBuscar);
         contenido += arti;
     }
     $("#contenedorPersonas").html(contenido);
+}
+
+function iniciarcontador() {
+    var n = 0;
+    var l = document.getElementById("number");
+    window.setInterval(function () {
+        l.innerHTML = n;
+        n++;
+    }, 1000);
 }

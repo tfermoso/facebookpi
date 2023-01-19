@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,12 +11,22 @@
     <script src="js/jquery-3.6.3.min.js"></script>
     <script src="js/index.js"></script>
 </head>
+
 <body>
     <div class="container">
-        <div>
-            <h3>Persona a buscar</h3>
-            <div id="personar_buscar"></div>
+        <div class="row">
+            <div class="col-6">
+                <h3>Persona a buscar</h3>
+                <div id="personar_buscar">
+
+                </div>
+            </div>
+            <div class="col-3">
+                <h3>Contador:</h3>
+                <div id="number"></div>
+            </div>
         </div>
+
         <div id="contenedorPersonas" class="row">
             <article class="col-md-1 col-sm-6 persona">
                 <p>Juan</p>
@@ -23,6 +34,7 @@
             </article>
         </div>
     </div>
-    
+
 </body>
+
 </html>
