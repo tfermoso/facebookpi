@@ -3,8 +3,8 @@ let personas = [];
 var contadorP = 0;
 var contadorE = 0;
 
-for (let index = 0; index < 50; index++) {
-    setTimeout(() => {
+for (let index = 0; index < 80; index++) {
+    //setTimeout(() => {
     $.ajax({
         url: "https://randomuser.me/api",
         success: (datos) => {
@@ -29,13 +29,22 @@ for (let index = 0; index < 50; index++) {
             contadorE++;
         }
     });
-    }, 1000)
+    //}, 1000)
 
 
 }
 
 
 function mostrarPersonas() {
+    let aleatorio = Math.floor(Math.random() * personas.length);
+    let htmlPersonaBuscar = `<article class="col-md-1 persona">
+    <p>${personas[aleatorio].nombre}</p>
+    <img src="${personas[aleatorio].imagen}" alt="">
+</article>`;
+$("#personar_buscar").html(htmlPersonaBuscar);
+
+
+
     let contenido = "";
     for (let index = 0; index < personas.length; index++) {
         const persona = personas[index];
@@ -43,7 +52,7 @@ function mostrarPersonas() {
         <p>${persona.nombre}</p>
         <img src="${persona.imagen}" alt="">
     </article>`;
-    contenido+=arti;
+        contenido += arti;
     }
     $("#contenedorPersonas").html(contenido);
 }
